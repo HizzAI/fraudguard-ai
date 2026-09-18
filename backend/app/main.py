@@ -4,11 +4,13 @@ import shutil
 from pathlib import Path
 from app.analyzer.apk_analyzer import analyze_apk
 from app.risk.risk_engine import calculate_risk
+from app.ml.feature_extractor import extract_features
+from app.ml.ml_engine import calculate_ml
 
 app = FastAPI(
     title="FraudGuard AI",
     description="AI-powered Android APK risk analysis platform",
-    version="1.0.0"
+    version="2.0.0"
 )
 
 # Allow the React dev server (and any local origin) to call the API
@@ -61,7 +63,14 @@ async def upload_apk(file: UploadFile = File(...)):
     # calculate_risk() consumes analysis_result — it never re-parses the APK.
     # If analysis failed, it returns a null risk state (no fabricated score).
     analysis_result["risk"] = calculate_risk(analysis_result)
-    
+
+    # Phase 5B: ML classification
+    # extract_features() converts the Phase 2 output into a 47-feature vector.
+    # calculate_ml() runs inference if the trained model is present.
+    # Both return graceful unavailable states on failure — no exceptions bubble up.
+    feature_result = extract_features(analysis_result, size_bytes=file_size)
+    analysis_result["ml"] = calculate_ml(feature_result)
+
     return {
         "filename": file.filename,
         "content_type": file.content_type,
