@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import shutil
 from pathlib import Path
 from app.analyzer.apk_analyzer import analyze_apk
+from app.risk.risk_engine import calculate_risk
 
 app = FastAPI(
     title="FraudGuard AI",
@@ -53,8 +54,13 @@ async def upload_apk(file: UploadFile = File(...)):
         
     file_size = file_path.stat().st_size
     
-    # Perform static analysis on the saved APK
+    # Phase 2: static analysis
     analysis_result = analyze_apk(str(file_path))
+
+    # Phase 3: deterministic risk scoring
+    # calculate_risk() consumes analysis_result — it never re-parses the APK.
+    # If analysis failed, it returns a null risk state (no fabricated score).
+    analysis_result["risk"] = calculate_risk(analysis_result)
     
     return {
         "filename": file.filename,
