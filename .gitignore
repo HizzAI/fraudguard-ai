@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.env
+.venv
+venv/
+env/
+
+# Androguard / analysis artifacts
+*.tmp
+
+# Uploaded APKs (don't commit user uploads)
+backend/uploads/
+backend/dummy.apk
+backend/sample.apk
+backend/test.txt
+backend/check_methods.py
+backend/test_androguard*.py
+
+# Node / Vite
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
