@@ -9,6 +9,8 @@ dist/
 build/
 .eggs/
 .env
+.env.*
+!.env.example
 .venv
 venv/
 env/
