@@ -1,0 +1,111 @@
+==================================================
+FRAUDGUARD AI - DATASET INTEGRITY & FEATURE AUDIT
+==================================================
+
+1. DATASET SHAPE
+- Rows: 40
+- Columns (total): 50
+- Feature count: 47
+
+2. LABEL VALIDATION
+- Unique labels: [1, 0]
+- Count per label: {1: 20, 0: 20}
+- Confirm benign=0 and malware=1: PASS
+
+3. FEATURE-TYPE AUDIT
+- Numeric columns count: 47
+- Boolean columns count: 0
+- Categorical/String columns count: 0
+
+4. MISSING-VALUE AUDIT
+- Total missing values: 0
+
+5. CONSTANT / NEAR-CONSTANT FEATURES
+- Features with only one unique value (12):
+  * feat_perm_biometric (constant value: 0)
+  * feat_perm_process_calls (constant value: 0)
+  * feat_api_exec_runtime (constant value: 0)
+  * feat_api_reflection (constant value: 0)
+  * feat_api_crypto (constant value: 0)
+  * feat_api_sms_send (constant value: 0)
+  * feat_api_telephony_read (constant value: 0)
+  * feat_api_location_access (constant value: 0)
+  * feat_api_root_check (constant value: 0)
+  * feat_api_clipboard (constant value: 0)
+  * feat_api_camera_silent (constant value: 0)
+  * feat_api_audio_record (constant value: 0)
+- Features with extremely low variance (<= 3 unique vals): 26
+
+6. DUPLICATE AUDIT
+- Duplicate rows (exact match): 0
+- Duplicate SHA-256 values: 0
+
+7. FEATURE LEAKAGE AUDIT
+- Suspicious leakage columns found: 0
+- Metadata non-feature columns: apk_name, sha256, label (EXPECTED to be separated during training)
+
+8. FEATURE DISTRIBUTION (Numeric Features)
+- feat_size_bytes: min=0.0, max=13346338.0, mean=1299817.4000, std=2783174.5129, unique=24
+- feat_dex_count: min=0.0, max=16.0, mean=1.0000, std=2.5115, unique=4
+- feat_perm_total: min=0.0, max=54.0, mean=9.4750, std=13.8675, unique=12
+- feat_perm_dangerous_count: min=0.0, max=16.0, mean=3.4750, std=5.3253, unique=9
+- feat_perm_send_sms: min=0.0, max=1.0, mean=0.0500, std=0.2207, unique=2
+- feat_perm_receive_sms: min=0.0, max=1.0, mean=0.1750, std=0.3848, unique=2
+- feat_perm_read_sms: min=0.0, max=1.0, mean=0.2250, std=0.4229, unique=2
+- feat_perm_call_phone: min=0.0, max=1.0, mean=0.1750, std=0.3848, unique=2
+- feat_perm_read_call_log: min=0.0, max=1.0, mean=0.1250, std=0.3349, unique=2
+- feat_perm_fine_location: min=0.0, max=1.0, mean=0.1500, std=0.3616, unique=2
+- feat_perm_bg_location: min=0.0, max=1.0, mean=0.0250, std=0.1581, unique=2
+- feat_perm_read_contacts: min=0.0, max=1.0, mean=0.1750, std=0.3848, unique=2
+- feat_perm_get_accounts: min=0.0, max=1.0, mean=0.1000, std=0.3038, unique=2
+- feat_perm_read_external: min=0.0, max=1.0, mean=0.1750, std=0.3848, unique=2
+- feat_perm_write_external: min=0.0, max=1.0, mean=0.1750, std=0.3848, unique=2
+- feat_perm_manage_external: min=0.0, max=1.0, mean=0.0500, std=0.2207, unique=2
+- feat_perm_camera: min=0.0, max=1.0, mean=0.1500, std=0.3616, unique=2
+- feat_perm_record_audio: min=0.0, max=1.0, mean=0.1500, std=0.3616, unique=2
+- feat_perm_request_install: min=0.0, max=1.0, mean=0.1250, std=0.3349, unique=2
+- feat_perm_bind_accessibility: min=0.0, max=1.0, mean=0.0500, std=0.2207, unique=2
+- feat_perm_alert_window: min=0.0, max=1.0, mean=0.1250, std=0.3349, unique=2
+- feat_perm_biometric: min=0.0, max=0.0, mean=0.0000, std=0.0000, unique=1
+- feat_perm_receive_boot: min=0.0, max=1.0, mean=0.4000, std=0.4961, unique=2
+- feat_perm_foreground_svc: min=0.0, max=1.0, mean=0.4250, std=0.5006, unique=2
+- feat_perm_process_calls: min=0.0, max=0.0, mean=0.0000, std=0.0000, unique=1
+- feat_perm_read_phone_state: min=0.0, max=1.0, mean=0.1750, std=0.3848, unique=2
+- feat_perm_change_network: min=0.0, max=1.0, mean=0.1000, std=0.3038, unique=2
+- feat_perm_change_wifi: min=0.0, max=1.0, mean=0.1000, std=0.3038, unique=2
+- feat_perm_disable_keyguard: min=0.0, max=1.0, mean=0.0750, std=0.2667, unique=2
+- feat_activity_count: min=0.0, max=16.0, mean=1.9250, std=3.2533, unique=9
+- feat_service_count: min=0.0, max=9.0, mean=2.0250, std=2.9307, unique=9
+- feat_receiver_count: min=0.0, max=13.0, mean=2.0500, std=4.0125, unique=6
+- feat_provider_count: min=0.0, max=3.0, mean=0.3500, std=0.6998, unique=4
+- feat_api_exec_runtime: min=0.0, max=0.0, mean=0.0000, std=0.0000, unique=1
+- feat_api_reflection: min=0.0, max=0.0, mean=0.0000, std=0.0000, unique=1
+- feat_api_dynamic_dexload: min=0.0, max=1.0, mean=0.0250, std=0.1581, unique=2
+- feat_api_crypto: min=0.0, max=0.0, mean=0.0000, std=0.0000, unique=1
+- feat_api_sms_send: min=0.0, max=0.0, mean=0.0000, std=0.0000, unique=1
+- feat_api_telephony_read: min=0.0, max=0.0, mean=0.0000, std=0.0000, unique=1
+- feat_api_location_access: min=0.0, max=0.0, mean=0.0000, std=0.0000, unique=1
+- feat_api_root_check: min=0.0, max=0.0, mean=0.0000, std=0.0000, unique=1
+- feat_api_clipboard: min=0.0, max=0.0, mean=0.0000, std=0.0000, unique=1
+- feat_api_camera_silent: min=0.0, max=0.0, mean=0.0000, std=0.0000, unique=1
+- feat_api_audio_record: min=0.0, max=0.0, mean=0.0000, std=0.0000, unique=1
+- feat_cert_present: min=0.0, max=1.0, mean=0.5750, std=0.5006, unique=2
+- feat_cert_is_debug: min=0.0, max=1.0, mean=0.0250, std=0.1581, unique=2
+- feat_cert_subject_len: min=0.0, max=175.0, mean=74.9750, std=69.6638, unique=14
+
+9. CORRELATION AUDIT (Pearson correlation with label)
+- Top 10 strongest absolute correlations with label:
+  * feat_perm_receive_boot: 0.8165
+  * feat_perm_foreground_svc: 0.7586
+  * feat_service_count: 0.6479
+  * feat_perm_total: 0.6372
+  * feat_perm_dangerous_count: 0.6323
+  * feat_cert_present: 0.5563
+  * feat_perm_read_sms: 0.5388
+  * feat_cert_subject_len: 0.5259
+  * feat_receiver_count: 0.4922
+  * feat_perm_call_phone: 0.4606
+
+- No extremely suspicious correlations (>0.95) found.
+
+==================================================

@@ -1,0 +1,96 @@
+==================================================
+FRAUDGUARD AI - FEATURE BEHAVIOR & EXPLAINABILITY
+==================================================
+
+5. CONSTANT-FEATURE ANALYSIS
+--------------------------------------------------
+The following 12 features are entirely constant (zero variance) in this 40-sample dataset:
+  - feat_perm_biometric
+  - feat_perm_process_calls
+  - feat_api_exec_runtime
+  - feat_api_reflection
+  - feat_api_crypto
+  - feat_api_sms_send
+  - feat_api_telephony_read
+  - feat_api_location_access
+  - feat_api_root_check
+  - feat_api_clipboard
+  - feat_api_camera_silent
+  - feat_api_audio_record
+
+Conclusion: These features provide no discriminative power here. However, they can be safely ignored (or safely passed to StandardScaler, which assigns a 0 coefficient) during preprocessing without crashing the pipeline. Do NOT delete them from the source schema, as they may become active in a larger dataset.
+
+1. CLASS-WISE FEATURE STATISTICS (Top 5 by absolute t-statistic)
+--------------------------------------------------
+Feature: feat_perm_receive_boot
+  Benign : Mean=0.0000, Std=0.0000, Unique=1
+  Malware: Mean=0.8000, Std=0.4000, Unique=2
+  Separation (t-stat): -8.7178 (p-val: 4.5714e-08)
+
+Feature: feat_perm_foreground_svc
+  Benign : Mean=0.0500, Std=0.2179, Unique=2
+  Malware: Mean=0.8000, Std=0.4000, Unique=2
+  Separation (t-stat): -7.1768 (p-val: 6.2336e-08)
+
+Feature: feat_service_count
+  Benign : Mean=0.1500, Std=0.4770, Unique=3
+  Malware: Mean=3.9000, Std=3.0806, Unique=8
+  Separation (t-stat): -5.2436 (p-val: 3.9919e-05)
+
+Feature: feat_perm_total
+  Benign : Mean=0.7500, Std=1.3370, Unique=5
+  Malware: Mean=18.2000, Std=14.8647, Unique=9
+  Separation (t-stat): -5.0964 (p-val: 6.1139e-05)
+
+Feature: feat_perm_dangerous_count
+  Benign : Mean=0.1500, Std=0.3571, Unique=2
+  Malware: Mean=6.8000, Std=5.7498, Unique=9
+  Separation (t-stat): -5.0317 (p-val: 7.2449e-05)
+
+2. LOGISTIC REGRESSION EXPLAINABILITY
+--------------------------------------------------
+Mean coefficients across 5-fold CV (Absolute Top 10):
+  - feat_perm_change_network: 0.6873 ± 0.0715
+  - feat_perm_receive_boot: 0.6829 ± 0.0741
+  - feat_size_bytes: 0.4883 ± 0.1866
+  - feat_perm_request_install: 0.3943 ± 0.1383
+  - feat_perm_foreground_svc: 0.3855 ± 0.1125
+  - feat_perm_dangerous_count: 0.2767 ± 0.0160
+  - feat_perm_total: 0.2391 ± 0.0368
+  - feat_perm_bind_accessibility: 0.2322 ± 0.0264
+  - feat_perm_read_sms: 0.2305 ± 0.0206
+  - feat_perm_receive_sms: 0.2168 ± 0.0360
+
+3. RANDOM FOREST FEATURE IMPORTANCE
+--------------------------------------------------
+Mean Gini importance across 5-fold CV (Top 10):
+(Note: This is model-derived feature importance, not causal importance.)
+  - feat_perm_dangerous_count: 0.1477 ± 0.0175
+  - feat_perm_total: 0.1351 ± 0.0114
+  - feat_perm_receive_boot: 0.1073 ± 0.0133
+  - feat_service_count: 0.0865 ± 0.0204
+  - feat_receiver_count: 0.0757 ± 0.0135
+  - feat_perm_foreground_svc: 0.0710 ± 0.0119
+  - feat_cert_subject_len: 0.0691 ± 0.0085
+  - feat_activity_count: 0.0521 ± 0.0072
+  - feat_size_bytes: 0.0394 ± 0.0084
+  - feat_perm_request_install: 0.0298 ± 0.0162
+
+4. CROSS-METHOD COMPARISON
+--------------------------------------------------
+Features that consistently appear highly ranked across methods:
+  - feat_perm_total (High Pearson, High LR Coef, High RF Importance)
+  - feat_perm_foreground_svc (High Pearson, High LR Coef, High RF Importance)
+  - feat_perm_receive_boot (High Pearson, High LR Coef, High RF Importance)
+  - feat_perm_dangerous_count (High Pearson, High LR Coef, High RF Importance)
+
+6. POTENTIAL DATASET-CONSTRUCTION ARTIFACTS
+--------------------------------------------------
+Warning: Given the extremely small sample size (40 APKs), features with high importance may simply be artifacts of class-specific sampling.
+For example:
+  - [WARN] Zero-variance features are a direct artifact of small sample size.
+
+7. CONCLUSION
+--------------------------------------------------
+These findings describe feature/model behavior on the 40-sample prototype dataset and do not establish real-world malware-detection performance.
+==================================================

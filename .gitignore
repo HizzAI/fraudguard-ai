@@ -1,46 +1,82 @@
-# Python
+# ─── Python ──────────────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
 *.egg
 *.egg-info/
-dist/
 build/
 .eggs/
+
+# ─── Virtual environments ─────────────────────────────────────────────────────
 .env
 .env.*
 !.env.example
-.venv
+.venv/
 venv/
 env/
 
-# Androguard / analysis artifacts
-*.tmp
+# ─── Secrets ──────────────────────────────────────────────────────────────────
+# Never commit .env files with real secrets.
+# Use .env.example for templates.
 
-# Uploaded APKs (don't commit user uploads)
+# ─── Uploaded APKs ────────────────────────────────────────────────────────────
+# User-uploaded files are transient; don't commit them.
 backend/uploads/
-backend/dummy.apk
-backend/sample.apk
+# Scratch/test APKs at project root or backend root
+*.apk
+# IMPORTANT: data/raw/ APKs ARE committed intentionally (prototype dataset).
+# To exclude them, uncomment the line below:
+# data/raw/
+
+# ─── ML model artifacts ───────────────────────────────────────────────────────
+# Trained model files should NOT be committed to source control.
+# They should be reproduced via the training script.
+*.pkl
+*.joblib
+*.model
+
+# ─── Backend scratch / one-off scripts ────────────────────────────────────────
 backend/test.txt
 backend/check_methods.py
 backend/test_androguard*.py
+backend/dummy.apk
+backend/sample.apk
 
-# Node / Vite
+# ─── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+uvicorn.log
+
+# ─── Pytest cache ─────────────────────────────────────────────────────────────
+.pytest_cache/
+.cache/
+
+# ─── Coverage ─────────────────────────────────────────────────────────────────
+.coverage
+htmlcov/
+coverage.xml
+
+# ─── Node / Vite ──────────────────────────────────────────────────────────────
 frontend/node_modules/
 frontend/dist/
 frontend/.vite/
 
-# macOS
+# ─── macOS ────────────────────────────────────────────────────────────────────
 .DS_Store
 .AppleDouble
 .LSOverride
+Icon?
+._*
 
-# IDEs
+# ─── IDEs / Editors ───────────────────────────────────────────────────────────
 .vscode/
 .idea/
 *.swp
 *.swo
+*.swn
 
-# Logs
-*.log
+# ─── Temporary / OS artifacts ─────────────────────────────────────────────────
+*.tmp
+*.bak
+*.orig
+Thumbs.db

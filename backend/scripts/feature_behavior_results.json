@@ -1,0 +1,1432 @@
+{
+  "constant_features": [
+    "feat_perm_biometric",
+    "feat_perm_process_calls",
+    "feat_api_exec_runtime",
+    "feat_api_reflection",
+    "feat_api_crypto",
+    "feat_api_sms_send",
+    "feat_api_telephony_read",
+    "feat_api_location_access",
+    "feat_api_root_check",
+    "feat_api_clipboard",
+    "feat_api_camera_silent",
+    "feat_api_audio_record"
+  ],
+  "class_stats": {
+    "feat_size_bytes": {
+      "benign": {
+        "mean": 171251.05,
+        "median": 0.0,
+        "std": 282867.91633454565,
+        "min": 0.0,
+        "max": 844980.0,
+        "unique": 7
+      },
+      "malware": {
+        "mean": 2428383.75,
+        "median": 361932.0,
+        "std": 3532347.5833053556,
+        "min": 0.0,
+        "max": 13346338.0,
+        "unique": 18
+      },
+      "t_stat": -2.7764023829821336,
+      "p_value": 0.01192966492471475
+    },
+    "feat_dex_count": {
+      "benign": {
+        "mean": 0.3,
+        "median": 0.0,
+        "std": 0.45825756949558394,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "malware": {
+        "mean": 1.7,
+        "median": 1.0,
+        "std": 3.333166662499792,
+        "min": 0.0,
+        "max": 16.0,
+        "unique": 4
+      },
+      "t_stat": -1.8137675292541426,
+      "p_value": 0.08496268026243735
+    },
+    "feat_perm_total": {
+      "benign": {
+        "mean": 0.75,
+        "median": 0.0,
+        "std": 1.3369741957120937,
+        "min": 0.0,
+        "max": 5.0,
+        "unique": 5
+      },
+      "malware": {
+        "mean": 18.2,
+        "median": 16.0,
+        "std": 14.864723340849636,
+        "min": 0.0,
+        "max": 54.0,
+        "unique": 9
+      },
+      "t_stat": -5.096427054998603,
+      "p_value": 6.113930089801034e-05
+    },
+    "feat_perm_dangerous_count": {
+      "benign": {
+        "mean": 0.15,
+        "median": 0.0,
+        "std": 0.3570714214271425,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "malware": {
+        "mean": 6.8,
+        "median": 5.0,
+        "std": 5.749782604586021,
+        "min": 0.0,
+        "max": 16.0,
+        "unique": 9
+      },
+      "t_stat": -5.031658717943879,
+      "p_value": 7.244939561632874e-05
+    },
+    "feat_perm_send_sms": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.1,
+        "median": 0.0,
+        "std": 0.30000000000000004,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "t_stat": -1.4529663145135578,
+      "p_value": 0.16254999902972705
+    },
+    "feat_perm_receive_sms": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.35,
+        "median": 0.0,
+        "std": 0.47696960070847283,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "t_stat": -3.1985573671218144,
+      "p_value": 0.004729458789911816
+    },
+    "feat_perm_read_sms": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.45,
+        "median": 0.0,
+        "std": 0.49749371855331004,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "t_stat": -3.9427724440366254,
+      "p_value": 0.0008731939249668246
+    },
+    "feat_perm_call_phone": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.35,
+        "median": 0.0,
+        "std": 0.47696960070847283,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "t_stat": -3.1985573671218144,
+      "p_value": 0.004729458789911816
+    },
+    "feat_perm_read_call_log": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.25,
+        "median": 0.0,
+        "std": 0.4330127018922193,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "t_stat": -2.516611478423583,
+      "p_value": 0.020991504670164814
+    },
+    "feat_perm_fine_location": {
+      "benign": {
+        "mean": 0.05,
+        "median": 0.0,
+        "std": 0.21794494717703364,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "malware": {
+        "mean": 0.25,
+        "median": 0.0,
+        "std": 0.4330127018922193,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "t_stat": -1.798344392265144,
+      "p_value": 0.08289517959768562
+    },
+    "feat_perm_bg_location": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.05,
+        "median": 0.0,
+        "std": 0.21794494717703364,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "t_stat": -1.0000000000000002,
+      "p_value": 0.3298768009211252
+    },
+    "feat_perm_read_contacts": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.35,
+        "median": 0.0,
+        "std": 0.47696960070847283,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "t_stat": -3.1985573671218144,
+      "p_value": 0.004729458789911816
+    },
+    "feat_perm_get_accounts": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.2,
+        "median": 0.0,
+        "std": 0.4,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "t_stat": -2.1794494717703365,
+      "p_value": 0.04208628671050174
+    },
+    "feat_perm_read_external": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.35,
+        "median": 0.0,
+        "std": 0.47696960070847283,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "t_stat": -3.1985573671218144,
+      "p_value": 0.004729458789911816
+    },
+    "feat_perm_write_external": {
+      "benign": {
+        "mean": 0.05,
+        "median": 0.0,
+        "std": 0.21794494717703367,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "malware": {
+        "mean": 0.3,
+        "median": 0.0,
+        "std": 0.45825756949558394,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "t_stat": -2.1474753748150164,
+      "p_value": 0.04082986358805696
+    },
+    "feat_perm_manage_external": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.1,
+        "median": 0.0,
+        "std": 0.30000000000000004,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "t_stat": -1.4529663145135578,
+      "p_value": 0.16254999902972705
+    },
+    "feat_perm_camera": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.3,
+        "median": 0.0,
+        "std": 0.45825756949558394,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "t_stat": -2.853569193634026,
+      "p_value": 0.010162572120690607
+    },
+    "feat_perm_record_audio": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.3,
+        "median": 0.0,
+        "std": 0.45825756949558394,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "t_stat": -2.853569193634026,
+      "p_value": 0.010162572120690607
+    },
+    "feat_perm_request_install": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.25,
+        "median": 0.0,
+        "std": 0.4330127018922193,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "t_stat": -2.516611478423583,
+      "p_value": 0.020991504670164814
+    },
+    "feat_perm_bind_accessibility": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.1,
+        "median": 0.0,
+        "std": 0.30000000000000004,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "t_stat": -1.4529663145135578,
+      "p_value": 0.16254999902972705
+    },
+    "feat_perm_alert_window": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.25,
+        "median": 0.0,
+        "std": 0.4330127018922193,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "t_stat": -2.516611478423583,
+      "p_value": 0.020991504670164814
+    },
+    "feat_perm_biometric": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "t_stat": 0.0,
+      "p_value": 1.0
+    },
+    "feat_perm_receive_boot": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.8,
+        "median": 1.0,
+        "std": 0.4,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "t_stat": -8.717797887081346,
+      "p_value": 4.571438028987201e-08
+    },
+    "feat_perm_foreground_svc": {
+      "benign": {
+        "mean": 0.05,
+        "median": 0.0,
+        "std": 0.21794494717703364,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "malware": {
+        "mean": 0.8,
+        "median": 1.0,
+        "std": 0.4,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "t_stat": -7.176769753613776,
+      "p_value": 6.233591725251565e-08
+    },
+    "feat_perm_process_calls": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "t_stat": 0.0,
+      "p_value": 1.0
+    },
+    "feat_perm_read_phone_state": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.35,
+        "median": 0.0,
+        "std": 0.47696960070847283,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "t_stat": -3.1985573671218144,
+      "p_value": 0.004729458789911816
+    },
+    "feat_perm_change_network": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.2,
+        "median": 0.0,
+        "std": 0.4000000000000001,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "t_stat": -2.1794494717703365,
+      "p_value": 0.04208628671050174
+    },
+    "feat_perm_change_wifi": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.2,
+        "median": 0.0,
+        "std": 0.4,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "t_stat": -2.1794494717703365,
+      "p_value": 0.04208628671050174
+    },
+    "feat_perm_disable_keyguard": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.15,
+        "median": 0.0,
+        "std": 0.3570714214271425,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "t_stat": -1.831103813679221,
+      "p_value": 0.08281384258451005
+    },
+    "feat_activity_count": {
+      "benign": {
+        "mean": 1.25,
+        "median": 0.0,
+        "std": 3.5053530492662217,
+        "min": 0.0,
+        "max": 16.0,
+        "unique": 4
+      },
+      "malware": {
+        "mean": 2.6,
+        "median": 1.0,
+        "std": 2.7276363393971716,
+        "min": 0.0,
+        "max": 10.0,
+        "unique": 8
+      },
+      "t_stat": -1.3248738950040342,
+      "p_value": 0.19359941308662296
+    },
+    "feat_service_count": {
+      "benign": {
+        "mean": 0.15,
+        "median": 0.0,
+        "std": 0.47696960070847283,
+        "min": 0.0,
+        "max": 2.0,
+        "unique": 3
+      },
+      "malware": {
+        "mean": 3.9,
+        "median": 4.5,
+        "std": 3.080584360149872,
+        "min": 0.0,
+        "max": 9.0,
+        "unique": 8
+      },
+      "t_stat": -5.243614956613764,
+      "p_value": 3.99188231574847e-05
+    },
+    "feat_receiver_count": {
+      "benign": {
+        "mean": 0.1,
+        "median": 0.0,
+        "std": 0.30000000000000004,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "malware": {
+        "mean": 4.0,
+        "median": 2.0,
+        "std": 4.868264577855234,
+        "min": 0.0,
+        "max": 13.0,
+        "unique": 6
+      },
+      "t_stat": -3.485332263014038,
+      "p_value": 0.002454477157214052
+    },
+    "feat_provider_count": {
+      "benign": {
+        "mean": 0.15,
+        "median": 0.0,
+        "std": 0.47696960070847283,
+        "min": 0.0,
+        "max": 2.0,
+        "unique": 3
+      },
+      "malware": {
+        "mean": 0.55,
+        "median": 0.0,
+        "std": 0.8046738469715542,
+        "min": 0.0,
+        "max": 3.0,
+        "unique": 4
+      },
+      "t_stat": -1.863943592034296,
+      "p_value": 0.07186071499323976
+    },
+    "feat_api_exec_runtime": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "t_stat": 0.0,
+      "p_value": 1.0
+    },
+    "feat_api_reflection": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "t_stat": 0.0,
+      "p_value": 1.0
+    },
+    "feat_api_dynamic_dexload": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.05,
+        "median": 0.0,
+        "std": 0.21794494717703364,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "t_stat": -1.0000000000000002,
+      "p_value": 0.3298768009211252
+    },
+    "feat_api_crypto": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "t_stat": 0.0,
+      "p_value": 1.0
+    },
+    "feat_api_sms_send": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "t_stat": 0.0,
+      "p_value": 1.0
+    },
+    "feat_api_telephony_read": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "t_stat": 0.0,
+      "p_value": 1.0
+    },
+    "feat_api_location_access": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "t_stat": 0.0,
+      "p_value": 1.0
+    },
+    "feat_api_root_check": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "t_stat": 0.0,
+      "p_value": 1.0
+    },
+    "feat_api_clipboard": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "t_stat": 0.0,
+      "p_value": 1.0
+    },
+    "feat_api_camera_silent": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "t_stat": 0.0,
+      "p_value": 1.0
+    },
+    "feat_api_audio_record": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "t_stat": 0.0,
+      "p_value": 1.0
+    },
+    "feat_cert_present": {
+      "benign": {
+        "mean": 0.3,
+        "median": 0.0,
+        "std": 0.45825756949558394,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "malware": {
+        "mean": 0.85,
+        "median": 1.0,
+        "std": 0.3570714214271425,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "t_stat": -4.126697181721677,
+      "p_value": 0.00020906260616256267
+    },
+    "feat_cert_is_debug": {
+      "benign": {
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "unique": 1
+      },
+      "malware": {
+        "mean": 0.05,
+        "median": 0.0,
+        "std": 0.21794494717703364,
+        "min": 0.0,
+        "max": 1.0,
+        "unique": 2
+      },
+      "t_stat": -1.0000000000000002,
+      "p_value": 0.3298768009211252
+    },
+    "feat_cert_subject_len": {
+      "benign": {
+        "mean": 38.8,
+        "median": 0.0,
+        "std": 61.58619975286672,
+        "min": 0.0,
+        "max": 143.0,
+        "unique": 3
+      },
+      "malware": {
+        "mean": 111.15,
+        "median": 115.5,
+        "std": 55.25692264323087,
+        "min": 0.0,
+        "max": 175.0,
+        "unique": 13
+      },
+      "t_stat": -3.8114562698785397,
+      "p_value": 0.0004979035916921667
+    }
+  },
+  "lr_explainability": [
+    {
+      "feature": "feat_perm_change_network",
+      "mean_coef": 0.6872786471686696,
+      "std_coef": 0.07154157912329526
+    },
+    {
+      "feature": "feat_perm_receive_boot",
+      "mean_coef": 0.6829189511999688,
+      "std_coef": 0.0741372764691423
+    },
+    {
+      "feature": "feat_size_bytes",
+      "mean_coef": 0.4883436596115067,
+      "std_coef": 0.18656678037081012
+    },
+    {
+      "feature": "feat_perm_request_install",
+      "mean_coef": 0.39432063238846793,
+      "std_coef": 0.13829865679435535
+    },
+    {
+      "feature": "feat_perm_foreground_svc",
+      "mean_coef": 0.3855437649866428,
+      "std_coef": 0.11253223455450344
+    },
+    {
+      "feature": "feat_perm_dangerous_count",
+      "mean_coef": 0.27669891845145034,
+      "std_coef": 0.01595065407349209
+    },
+    {
+      "feature": "feat_perm_total",
+      "mean_coef": 0.23912739284480383,
+      "std_coef": 0.03682603963395519
+    },
+    {
+      "feature": "feat_perm_bind_accessibility",
+      "mean_coef": 0.2322449388961719,
+      "std_coef": 0.026394469242703337
+    },
+    {
+      "feature": "feat_perm_read_sms",
+      "mean_coef": 0.23045397020644232,
+      "std_coef": 0.020626402564723624
+    },
+    {
+      "feature": "feat_perm_receive_sms",
+      "mean_coef": 0.2168304726686754,
+      "std_coef": 0.03602321458777611
+    },
+    {
+      "feature": "feat_cert_subject_len",
+      "mean_coef": -0.20996723482867755,
+      "std_coef": 0.021626328780264516
+    },
+    {
+      "feature": "feat_service_count",
+      "mean_coef": 0.18397277149173225,
+      "std_coef": 0.02955639852290909
+    },
+    {
+      "feature": "feat_receiver_count",
+      "mean_coef": 0.15754492621349764,
+      "std_coef": 0.029240953782650136
+    },
+    {
+      "feature": "feat_activity_count",
+      "mean_coef": -0.1497543664246372,
+      "std_coef": 0.07153996950752299
+    },
+    {
+      "feature": "feat_cert_present",
+      "mean_coef": -0.13633531809075203,
+      "std_coef": 0.06645867108207099
+    },
+    {
+      "feature": "feat_perm_read_external",
+      "mean_coef": 0.12400678061837075,
+      "std_coef": 0.030580972886459556
+    },
+    {
+      "feature": "feat_perm_camera",
+      "mean_coef": 0.1232311086491417,
+      "std_coef": 0.022123437466054198
+    },
+    {
+      "feature": "feat_perm_call_phone",
+      "mean_coef": 0.1201486794727648,
+      "std_coef": 0.021385198571202288
+    },
+    {
+      "feature": "feat_perm_read_contacts",
+      "mean_coef": 0.1201486794727648,
+      "std_coef": 0.021385198571202288
+    },
+    {
+      "feature": "feat_perm_read_phone_state",
+      "mean_coef": 0.1201486794727648,
+      "std_coef": 0.021385198571202288
+    },
+    {
+      "feature": "feat_perm_fine_location",
+      "mean_coef": -0.11991874528861865,
+      "std_coef": 0.0955152577691102
+    },
+    {
+      "feature": "feat_provider_count",
+      "mean_coef": 0.10321010325498496,
+      "std_coef": 0.06267145689363315
+    },
+    {
+      "feature": "feat_perm_get_accounts",
+      "mean_coef": 0.10063474087755442,
+      "std_coef": 0.014323697129435596
+    },
+    {
+      "feature": "feat_perm_change_wifi",
+      "mean_coef": 0.10063474087755442,
+      "std_coef": 0.014323697129435596
+    },
+    {
+      "feature": "feat_perm_read_call_log",
+      "mean_coef": 0.09635213980460003,
+      "std_coef": 0.01322456823876077
+    },
+    {
+      "feature": "feat_perm_alert_window",
+      "mean_coef": 0.09165443299272273,
+      "std_coef": 0.014280112171215132
+    },
+    {
+      "feature": "feat_perm_record_audio",
+      "mean_coef": 0.0893746313727848,
+      "std_coef": 0.012939315695293028
+    },
+    {
+      "feature": "feat_api_dynamic_dexload",
+      "mean_coef": 0.08874444340819415,
+      "std_coef": 0.047434439964208486
+    },
+    {
+      "feature": "feat_perm_send_sms",
+      "mean_coef": 0.062436939097646485,
+      "std_coef": 0.03251696130350492
+    },
+    {
+      "feature": "feat_perm_disable_keyguard",
+      "mean_coef": 0.05998793759600799,
+      "std_coef": 0.035496878288990924
+    },
+    {
+      "feature": "feat_perm_write_external",
+      "mean_coef": -0.03238084465434588,
+      "std_coef": 0.05040165473908529
+    },
+    {
+      "feature": "feat_dex_count",
+      "mean_coef": -0.02552582624453325,
+      "std_coef": 0.0345011539645933
+    },
+    {
+      "feature": "feat_cert_is_debug",
+      "mean_coef": 0.008999175496263782,
+      "std_coef": 0.004756588581475961
+    },
+    {
+      "feature": "feat_perm_bg_location",
+      "mean_coef": 0.008999175496263775,
+      "std_coef": 0.004756588581475957
+    },
+    {
+      "feature": "feat_perm_manage_external",
+      "mean_coef": 0.007580888393660277,
+      "std_coef": 0.0034751877166042033
+    },
+    {
+      "feature": "feat_perm_biometric",
+      "mean_coef": 0.0,
+      "std_coef": 0.0
+    },
+    {
+      "feature": "feat_perm_process_calls",
+      "mean_coef": 0.0,
+      "std_coef": 0.0
+    },
+    {
+      "feature": "feat_api_exec_runtime",
+      "mean_coef": 0.0,
+      "std_coef": 0.0
+    },
+    {
+      "feature": "feat_api_reflection",
+      "mean_coef": 0.0,
+      "std_coef": 0.0
+    },
+    {
+      "feature": "feat_api_crypto",
+      "mean_coef": 0.0,
+      "std_coef": 0.0
+    },
+    {
+      "feature": "feat_api_sms_send",
+      "mean_coef": 0.0,
+      "std_coef": 0.0
+    },
+    {
+      "feature": "feat_api_telephony_read",
+      "mean_coef": 0.0,
+      "std_coef": 0.0
+    },
+    {
+      "feature": "feat_api_location_access",
+      "mean_coef": 0.0,
+      "std_coef": 0.0
+    },
+    {
+      "feature": "feat_api_root_check",
+      "mean_coef": 0.0,
+      "std_coef": 0.0
+    },
+    {
+      "feature": "feat_api_clipboard",
+      "mean_coef": 0.0,
+      "std_coef": 0.0
+    },
+    {
+      "feature": "feat_api_camera_silent",
+      "mean_coef": 0.0,
+      "std_coef": 0.0
+    },
+    {
+      "feature": "feat_api_audio_record",
+      "mean_coef": 0.0,
+      "std_coef": 0.0
+    }
+  ],
+  "rf_importance": [
+    {
+      "feature": "feat_perm_dangerous_count",
+      "mean_imp": 0.14766647199312932,
+      "std_imp": 0.017497962180369767
+    },
+    {
+      "feature": "feat_perm_total",
+      "mean_imp": 0.1350610775368092,
+      "std_imp": 0.011409895614181173
+    },
+    {
+      "feature": "feat_perm_receive_boot",
+      "mean_imp": 0.10730459631370459,
+      "std_imp": 0.01330945538341645
+    },
+    {
+      "feature": "feat_service_count",
+      "mean_imp": 0.08650780559960912,
+      "std_imp": 0.02044961931782463
+    },
+    {
+      "feature": "feat_receiver_count",
+      "mean_imp": 0.07572489396254617,
+      "std_imp": 0.01345382480865848
+    },
+    {
+      "feature": "feat_perm_foreground_svc",
+      "mean_imp": 0.07096349403648752,
+      "std_imp": 0.011886560975693386
+    },
+    {
+      "feature": "feat_cert_subject_len",
+      "mean_imp": 0.06907893837807373,
+      "std_imp": 0.00854488857735348
+    },
+    {
+      "feature": "feat_activity_count",
+      "mean_imp": 0.0520777770650217,
+      "std_imp": 0.007166701434492284
+    },
+    {
+      "feature": "feat_size_bytes",
+      "mean_imp": 0.03943490521896429,
+      "std_imp": 0.008350881838069075
+    },
+    {
+      "feature": "feat_perm_request_install",
+      "mean_imp": 0.02981906171706286,
+      "std_imp": 0.01622990647473079
+    },
+    {
+      "feature": "feat_perm_change_network",
+      "mean_imp": 0.022729348135047112,
+      "std_imp": 0.006571162767483833
+    },
+    {
+      "feature": "feat_cert_present",
+      "mean_imp": 0.021526071996598693,
+      "std_imp": 0.006419815093219867
+    },
+    {
+      "feature": "feat_perm_call_phone",
+      "mean_imp": 0.01764013261753703,
+      "std_imp": 0.0023588229961272284
+    },
+    {
+      "feature": "feat_perm_read_external",
+      "mean_imp": 0.01701515405814414,
+      "std_imp": 0.011987818727794012
+    },
+    {
+      "feature": "feat_dex_count",
+      "mean_imp": 0.016293754771508493,
+      "std_imp": 0.007717277522519276
+    },
+    {
+      "feature": "feat_provider_count",
+      "mean_imp": 0.015052716034528926,
+      "std_imp": 0.0027418160290184584
+    },
+    {
+      "feature": "feat_perm_camera",
+      "mean_imp": 0.014576477054867329,
+      "std_imp": 0.003571412150094132
+    },
+    {
+      "feature": "feat_perm_receive_sms",
+      "mean_imp": 0.010789387494928127,
+      "std_imp": 0.008090789725882468
+    },
+    {
+      "feature": "feat_perm_read_sms",
+      "mean_imp": 0.010429124661155389,
+      "std_imp": 0.0015660978715926472
+    },
+    {
+      "feature": "feat_perm_read_phone_state",
+      "mean_imp": 0.006242098832592533,
+      "std_imp": 0.002331919463707233
+    },
+    {
+      "feature": "feat_perm_write_external",
+      "mean_imp": 0.005647164218026901,
+      "std_imp": 0.0035166525229039626
+    },
+    {
+      "feature": "feat_perm_read_contacts",
+      "mean_imp": 0.005452377279013635,
+      "std_imp": 0.002511272964757683
+    },
+    {
+      "feature": "feat_perm_alert_window",
+      "mean_imp": 0.005004608879271602,
+      "std_imp": 0.002043822650502376
+    },
+    {
+      "feature": "feat_perm_read_call_log",
+      "mean_imp": 0.004256935960059884,
+      "std_imp": 0.0010040786485180709
+    },
+    {
+      "feature": "feat_perm_record_audio",
+      "mean_imp": 0.003573563191844926,
+      "std_imp": 0.0023864371122348776
+    },
+    {
+      "feature": "feat_perm_get_accounts",
+      "mean_imp": 0.0030252819091579264,
+      "std_imp": 0.0039090636740078035
+    },
+    {
+      "feature": "feat_perm_fine_location",
+      "mean_imp": 0.002121423698700963,
+      "std_imp": 0.0026069648125859987
+    },
+    {
+      "feature": "feat_perm_bind_accessibility",
+      "mean_imp": 0.001646723299562806,
+      "std_imp": 0.0010043984653294491
+    },
+    {
+      "feature": "feat_perm_disable_keyguard",
+      "mean_imp": 0.001422574695429148,
+      "std_imp": 0.0018456531459953192
+    },
+    {
+      "feature": "feat_perm_change_wifi",
+      "mean_imp": 0.0010864616345509271,
+      "std_imp": 0.0017485903122071433
+    },
+    {
+      "feature": "feat_api_dynamic_dexload",
+      "mean_imp": 0.000503250425448567,
+      "std_imp": 0.0006295966282731913
+    },
+    {
+      "feature": "feat_perm_manage_external",
+      "mean_imp": 0.00029649472784269,
+      "std_imp": 0.00059298945568538
+    },
+    {
+      "feature": "feat_perm_send_sms",
+      "mean_imp": 2.9852602773804328e-05,
+      "std_imp": 5.970520554760865e-05
+    },
+    {
+      "feature": "feat_perm_bg_location",
+      "mean_imp": 0.0,
+      "std_imp": 0.0
+    },
+    {
+      "feature": "feat_perm_biometric",
+      "mean_imp": 0.0,
+      "std_imp": 0.0
+    },
+    {
+      "feature": "feat_perm_process_calls",
+      "mean_imp": 0.0,
+      "std_imp": 0.0
+    },
+    {
+      "feature": "feat_api_exec_runtime",
+      "mean_imp": 0.0,
+      "std_imp": 0.0
+    },
+    {
+      "feature": "feat_api_reflection",
+      "mean_imp": 0.0,
+      "std_imp": 0.0
+    },
+    {
+      "feature": "feat_api_crypto",
+      "mean_imp": 0.0,
+      "std_imp": 0.0
+    },
+    {
+      "feature": "feat_api_sms_send",
+      "mean_imp": 0.0,
+      "std_imp": 0.0
+    },
+    {
+      "feature": "feat_api_telephony_read",
+      "mean_imp": 0.0,
+      "std_imp": 0.0
+    },
+    {
+      "feature": "feat_api_location_access",
+      "mean_imp": 0.0,
+      "std_imp": 0.0
+    },
+    {
+      "feature": "feat_api_root_check",
+      "mean_imp": 0.0,
+      "std_imp": 0.0
+    },
+    {
+      "feature": "feat_api_clipboard",
+      "mean_imp": 0.0,
+      "std_imp": 0.0
+    },
+    {
+      "feature": "feat_api_camera_silent",
+      "mean_imp": 0.0,
+      "std_imp": 0.0
+    },
+    {
+      "feature": "feat_api_audio_record",
+      "mean_imp": 0.0,
+      "std_imp": 0.0
+    },
+    {
+      "feature": "feat_cert_is_debug",
+      "mean_imp": 0.0,
+      "std_imp": 0.0
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+==================================================
+FRAUDGUARD AI - BASELINE ML EXPERIMENT REPORT
+==================================================
+
+1. Dataset size: 40 samples (20 Benign, 20 Malware)
+2. Number of features: 47
+3. Cross-validation strategy: Stratified 5-Fold CV
+4. Models evaluated: Logistic Regression, Random Forest, SVM
+
+==================================================
+MODEL PERFORMANCE
+==================================================
+
+--- Logistic Regression ---
+- Accuracy:
+  * Mean ± Std: 0.9000 ± 0.0935
+  * Fold scores: 0.7500, 1.0000, 0.8750, 1.0000, 0.8750
+- Precision:
+  * Mean ± Std: 1.0000 ± 0.0000
+  * Fold scores: 1.0000, 1.0000, 1.0000, 1.0000, 1.0000
+- Recall:
+  * Mean ± Std: 0.8000 ± 0.1871
+  * Fold scores: 0.5000, 1.0000, 0.7500, 1.0000, 0.7500
+- F1:
+  * Mean ± Std: 0.8762 ± 0.1227
+  * Fold scores: 0.6667, 1.0000, 0.8571, 1.0000, 0.8571
+- Roc_auc:
+  * Mean ± Std: 0.9250 ± 0.0643
+  * Fold scores: 0.8438, 1.0000, 0.9062, 1.0000, 0.8750
+
+- Aggregated Confusion Matrix (Across 5 Folds):
+  * True Negatives (Correct Benign): 20
+  * False Positives (Incorrect Malware): 0
+  * False Negatives (Incorrect Benign): 4
+  * True Positives (Correct Malware): 16
+
+--- Random Forest ---
+- Accuracy:
+  * Mean ± Std: 0.9000 ± 0.0935
+  * Fold scores: 0.7500, 1.0000, 0.8750, 1.0000, 0.8750
+- Precision:
+  * Mean ± Std: 1.0000 ± 0.0000
+  * Fold scores: 1.0000, 1.0000, 1.0000, 1.0000, 1.0000
+- Recall:
+  * Mean ± Std: 0.8000 ± 0.1871
+  * Fold scores: 0.5000, 1.0000, 0.7500, 1.0000, 0.7500
+- F1:
+  * Mean ± Std: 0.8762 ± 0.1227
+  * Fold scores: 0.6667, 1.0000, 0.8571, 1.0000, 0.8571
+- Roc_auc:
+  * Mean ± Std: 0.9000 ± 0.1035
+  * Fold scores: 0.7188, 1.0000, 0.9062, 1.0000, 0.8750
+
+- Aggregated Confusion Matrix (Across 5 Folds):
+  * True Negatives (Correct Benign): 20
+  * False Positives (Incorrect Malware): 0
+  * False Negatives (Incorrect Benign): 4
+  * True Positives (Correct Malware): 16
+
+--- SVM ---
+- Accuracy:
+  * Mean ± Std: 0.9000 ± 0.0935
+  * Fold scores: 0.7500, 1.0000, 0.8750, 1.0000, 0.8750
+- Precision:
+  * Mean ± Std: 0.9500 ± 0.1000
+  * Fold scores: 0.7500, 1.0000, 1.0000, 1.0000, 1.0000
+- Recall:
+  * Mean ± Std: 0.8500 ± 0.1225
+  * Fold scores: 0.7500, 1.0000, 0.7500, 1.0000, 0.7500
+- F1:
+  * Mean ± Std: 0.8929 ± 0.0958
+  * Fold scores: 0.7500, 1.0000, 0.8571, 1.0000, 0.8571
+- Roc_auc:
+  * Mean ± Std: 0.9125 ± 0.0723
+  * Fold scores: 0.8438, 1.0000, 0.8438, 1.0000, 0.8750
+
+- Aggregated Confusion Matrix (Across 5 Folds):
+  * True Negatives (Correct Benign): 19
+  * False Positives (Incorrect Malware): 1
+  * False Negatives (Incorrect Benign): 3
+  * True Positives (Correct Malware): 17
+
+==================================================
+INTERPRETATION
+==================================================
+The metrics above represent baseline cross-validation performance on the 40-sample prototype dataset.
+Do NOT claim the resulting metrics represent real-world malware detection capability.
+Do NOT describe the highest-scoring model as 'best' for production.
