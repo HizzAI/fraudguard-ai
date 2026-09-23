@@ -586,11 +586,15 @@ export default function App() {
             className="flex items-center gap-3 cursor-pointer group"
             onClick={() => { setResult(null); setShowUpload(false); }}
           >
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white shadow-[0_0_15px_rgba(37,99,235,0.4)] group-hover:shadow-[0_0_20px_rgba(37,99,235,0.6)] transition-all">
-              <ShieldAlert className="w-5 h-5" />
-            </div>
+            <img 
+              src="/fraudguard-logo.svg" 
+              alt="FraudGuard AI Logo" 
+              className="w-8 h-8 group-hover:scale-105 transition-transform" 
+            />
             <div>
-              <h1 className="font-bold text-lg leading-tight tracking-tight text-white group-hover:text-blue-400 transition-colors">FraudGuard AI</h1>
+              <h1 className="font-bold text-xl leading-tight tracking-tight text-white group-hover:text-blue-50 transition-colors">
+                FraudGuard <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300">AI</span>
+              </h1>
             </div>
           </div>
           <div className="flex items-center gap-4">
@@ -598,7 +602,6 @@ export default function App() {
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
               ML Engine Ready
             </span>
-            <span className="text-xs font-mono text-slate-500 border border-slate-700 px-2 py-1 rounded">SIH 2026</span>
           </div>
         </div>
       </header>
