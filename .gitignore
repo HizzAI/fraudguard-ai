@@ -19,6 +19,10 @@ env/
 # ─── Secrets ──────────────────────────────────────────────────────────────────
 # Never commit .env files with real secrets.
 # Use .env.example for templates.
+# AndroZoo API key must NEVER appear in source control.
+.env.androzoo
+.env.secrets
+secrets.env
 
 # ─── Uploaded APKs ────────────────────────────────────────────────────────────
 # User-uploaded files are transient; don't commit them.
@@ -29,10 +33,22 @@ backend/uploads/
 # To exclude them, uncomment the line below:
 # data/raw/
 
+# ─── AndroZoo dataset ─────────────────────────────────────────────────────────
+# AndroZoo-downloaded APKs are NEVER committed to source control.
+# They may be large and are re-downloadable via the AndroZoo API.
+data/raw/androzoo/*.apk
+# AndroZoo bulk metadata file is also never committed (can be hundreds of MB).
+data/raw/androzoo/latest.csv
+data/raw/androzoo/latest.csv.gz
+# The manifest CSV (data/manifests/) IS committed — it contains only safe metadata.
+# The processed/ directory holds derived features; commit selectively.
+data/processed/*.apk
+
 # ─── ML model artifacts ───────────────────────────────────────────────────────
 # Trained model files should NOT be committed to source control.
 # They should be reproduced via the training script.
 *.pkl
+!backend/app/ml/model_rf_v1.pkl
 *.joblib
 *.model
 

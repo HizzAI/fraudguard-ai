@@ -1,5 +1,5 @@
 """
-ml_engine.py — Loads the trained Random Forest model and performs inference.
+ml_engine.py — Loads the trained ML model and performs inference.
 
 CONTRACT:
   - Input:  the dict returned by extract_features() (from feature_extractor.py).
@@ -14,7 +14,8 @@ CONTRACT:
 MODEL FILE:
   Expected at: backend/app/ml/model_rf_v1.pkl
   Serialized with joblib.dump().
-  Must be trained separately using scripts/train_model.py.
+  Current model: Combined SVM (SVC with Platt scaling) trained on 241 samples
+                 (MalEval 40 + AndroZoo 201), 47 features, seed=42.
   The model must expose .predict_proba(X) → [[p_benign, p_malicious]].
 
 DISCLAIMER (always included):
@@ -31,7 +32,7 @@ logger = logging.getLogger(__name__)
 # ---------------------------------------------------------------------------
 # Constants
 # ---------------------------------------------------------------------------
-MODEL_VERSION  = "rf-v1.0"
+MODEL_VERSION  = "svm-combined-v1.0"
 _MODEL_PATH    = Path(__file__).resolve().parent / "model_rf_v1.pkl"
 _DISCLAIMER    = (
     "This is a probabilistic classifier trained on historical data. "
@@ -133,7 +134,7 @@ def calculate_ml(feature_result: Dict[str, Any]) -> Dict[str, Any]:
 
     # ── 4. Run inference ─────────────────────────────────────────────────────
     try:
-        # RandomForestClassifier.classes_ order is [0=benign, 1=malicious]
+        # Model.classes_ order is [0=benign, 1=malicious]
         # predict_proba returns [[p_class0, p_class1]]
         proba = model.predict_proba(X)[0]
 
