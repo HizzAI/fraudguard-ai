@@ -1,0 +1,463 @@
+{
+  "repro_ok": true,
+  "repro_result": {
+    "seed": 42,
+    "tn": 104,
+    "fp": 16,
+    "fn": 8,
+    "tp": 113,
+    "metrics": {
+      "accuracy": {
+        "mean": 0.9003401360544216,
+        "std": 0.069056100983673,
+        "folds": [
+          0.9183673469387755,
+          0.7916666666666666,
+          0.8541666666666666,
+          0.9791666666666666,
+          0.9583333333333334
+        ]
+      },
+      "precision": {
+        "mean": 0.8801335101679928,
+        "std": 0.08240977511562472,
+        "folds": [
+          0.92,
+          0.7692307692307693,
+          0.7931034482758621,
+          0.96,
+          0.9583333333333334
+        ]
+      },
+      "recall": {
+        "mean": 0.9339999999999999,
+        "std": 0.05633826408401309,
+        "folds": [
+          0.92,
+          0.8333333333333334,
+          0.9583333333333334,
+          1.0,
+          0.9583333333333334
+        ]
+      },
+      "f1": {
+        "mean": 0.9051699396739827,
+        "std": 0.0648580492399722,
+        "folds": [
+          0.92,
+          0.8,
+          0.8679245283018868,
+          0.9795918367346939,
+          0.9583333333333334
+        ]
+      },
+      "roc_auc": {
+        "mean": 0.9463750000000001,
+        "std": 0.03621655012679174,
+        "folds": [
+          0.9558333333333333,
+          0.890625,
+          0.921875,
+          0.9930555555555555,
+          0.9704861111111112
+        ]
+      }
+    }
+  },
+  "multi_seed": [
+    {
+      "seed": 42,
+      "tn": 104,
+      "fp": 16,
+      "fn": 8,
+      "tp": 113,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.9003401360544216,
+          "std": 0.069056100983673,
+          "folds": [
+            0.9183673469387755,
+            0.7916666666666666,
+            0.8541666666666666,
+            0.9791666666666666,
+            0.9583333333333334
+          ]
+        },
+        "precision": {
+          "mean": 0.8801335101679928,
+          "std": 0.08240977511562472,
+          "folds": [
+            0.92,
+            0.7692307692307693,
+            0.7931034482758621,
+            0.96,
+            0.9583333333333334
+          ]
+        },
+        "recall": {
+          "mean": 0.9339999999999999,
+          "std": 0.05633826408401309,
+          "folds": [
+            0.92,
+            0.8333333333333334,
+            0.9583333333333334,
+            1.0,
+            0.9583333333333334
+          ]
+        },
+        "f1": {
+          "mean": 0.9051699396739827,
+          "std": 0.0648580492399722,
+          "folds": [
+            0.92,
+            0.8,
+            0.8679245283018868,
+            0.9795918367346939,
+            0.9583333333333334
+          ]
+        },
+        "roc_auc": {
+          "mean": 0.9463750000000001,
+          "std": 0.03621655012679174,
+          "folds": [
+            0.9558333333333333,
+            0.890625,
+            0.921875,
+            0.9930555555555555,
+            0.9704861111111112
+          ]
+        }
+      }
+    },
+    {
+      "seed": 123,
+      "tn": 104,
+      "fp": 16,
+      "fn": 10,
+      "tp": 111,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.8920918367346939,
+          "std": 0.020516647604174487,
+          "folds": [
+            0.8979591836734694,
+            0.9166666666666666,
+            0.8541666666666666,
+            0.8958333333333334,
+            0.8958333333333334
+          ]
+        },
+        "precision": {
+          "mean": 0.8763823472878943,
+          "std": 0.03671344801822076,
+          "folds": [
+            0.9166666666666666,
+            0.8846153846153846,
+            0.84,
+            0.8275862068965517,
+            0.9130434782608695
+          ]
+        },
+        "recall": {
+          "mean": 0.9176666666666666,
+          "std": 0.051946553730198936,
+          "folds": [
+            0.88,
+            0.9583333333333334,
+            0.875,
+            1.0,
+            0.875
+          ]
+        },
+        "f1": {
+          "mean": 0.8948758878902826,
+          "std": 0.020892100372223808,
+          "folds": [
+            0.8979591836734694,
+            0.92,
+            0.8571428571428571,
+            0.9056603773584906,
+            0.8936170212765957
+          ]
+        },
+        "roc_auc": {
+          "mean": 0.948486111111111,
+          "std": 0.01231468732529386,
+          "folds": [
+            0.9316666666666666,
+            0.9644097222222222,
+            0.9505208333333333,
+            0.9375,
+            0.9583333333333334
+          ]
+        }
+      }
+    },
+    {
+      "seed": 2026,
+      "tn": 104,
+      "fp": 16,
+      "fn": 7,
+      "tp": 114,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.9045918367346939,
+          "std": 0.031078274288781776,
+          "folds": [
+            0.8979591836734694,
+            0.8541666666666666,
+            0.9375,
+            0.8958333333333334,
+            0.9375
+          ]
+        },
+        "precision": {
+          "mean": 0.8813204508856683,
+          "std": 0.0518548523351465,
+          "folds": [
+            0.8333333333333334,
+            0.8148148148148148,
+            0.8888888888888888,
+            0.9130434782608695,
+            0.9565217391304348
+          ]
+        },
+        "recall": {
+          "mean": 0.9416666666666667,
+          "std": 0.05000000000000001,
+          "folds": [
+            1.0,
+            0.9166666666666666,
+            1.0,
+            0.875,
+            0.9166666666666666
+          ]
+        },
+        "f1": {
+          "mean": 0.9085599423521826,
+          "std": 0.02880533881718887,
+          "folds": [
+            0.9090909090909091,
+            0.8627450980392157,
+            0.9411764705882353,
+            0.8936170212765957,
+            0.9361702127659575
+          ]
+        },
+        "roc_auc": {
+          "mean": 0.954,
+          "std": 0.015903390332695586,
+          "folds": [
+            0.9783333333333334,
+            0.9305555555555555,
+            0.9618055555555556,
+            0.9461805555555556,
+            0.953125
+          ]
+        }
+      }
+    },
+    {
+      "seed": 31415,
+      "tn": 104,
+      "fp": 16,
+      "fn": 7,
+      "tp": 114,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.9046768707482993,
+          "std": 0.03592664432565612,
+          "folds": [
+            0.8775510204081632,
+            0.875,
+            0.9375,
+            0.875,
+            0.9583333333333334
+          ]
+        },
+        "precision": {
+          "mean": 0.8779104037724726,
+          "std": 0.03069204226823222,
+          "folds": [
+            0.8275862068965517,
+            0.875,
+            0.8888888888888888,
+            0.875,
+            0.9230769230769231
+          ]
+        },
+        "recall": {
+          "mean": 0.942,
+          "std": 0.05662155066756826,
+          "folds": [
+            0.96,
+            0.875,
+            1.0,
+            0.875,
+            1.0
+          ]
+        },
+        "f1": {
+          "mean": 0.9080130718954248,
+          "std": 0.03563119957066005,
+          "folds": [
+            0.8888888888888888,
+            0.875,
+            0.9411764705882353,
+            0.875,
+            0.96
+          ]
+        },
+        "roc_auc": {
+          "mean": 0.9463680555555556,
+          "std": 0.035704789356957346,
+          "folds": [
+            0.8941666666666666,
+            0.9166666666666666,
+            0.9704861111111112,
+            0.959201388888889,
+            0.9913194444444444
+          ]
+        }
+      }
+    },
+    {
+      "seed": 777,
+      "tn": 105,
+      "fp": 15,
+      "fn": 9,
+      "tp": 112,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.9003401360544216,
+          "std": 0.0465250299989218,
+          "folds": [
+            0.9183673469387755,
+            0.8541666666666666,
+            0.9791666666666666,
+            0.8541666666666666,
+            0.8958333333333334
+          ]
+        },
+        "precision": {
+          "mean": 0.885985451718585,
+          "std": 0.06554902540762565,
+          "folds": [
+            0.8620689655172413,
+            0.8148148148148148,
+            1.0,
+            0.84,
+            0.9130434782608695
+          ]
+        },
+        "recall": {
+          "mean": 0.925,
+          "std": 0.04859126579037751,
+          "folds": [
+            1.0,
+            0.9166666666666666,
+            0.9583333333333334,
+            0.875,
+            0.875
+          ]
+        },
+        "f1": {
+          "mean": 0.9036308613279826,
+          "std": 0.04487542105455152,
+          "folds": [
+            0.9259259259259259,
+            0.8627450980392157,
+            0.9787234042553191,
+            0.8571428571428571,
+            0.8936170212765957
+          ]
+        },
+        "roc_auc": {
+          "mean": 0.9446666666666665,
+          "std": 0.036120355387267045,
+          "folds": [
+            0.9733333333333333,
+            0.9149305555555555,
+            0.9835069444444445,
+            0.8897569444444444,
+            0.9618055555555556
+          ]
+        }
+      }
+    }
+  ],
+  "stability": {
+    "recall_values": [
+      0.9339999999999999,
+      0.9176666666666666,
+      0.9416666666666667,
+      0.942,
+      0.925
+    ],
+    "recall_mean": 0.9320666666666666,
+    "recall_std": 0.009506489011897774,
+    "recall_min": 0.9176666666666666,
+    "recall_max": 0.942,
+    "f1_std": 0.004932338065301194,
+    "stability_flags": [],
+    "stable": true
+  },
+  "svm_notes": {
+    "training_pipeline_svm": "SVC(probability=True, random_state=42) wrapped in Pipeline([StandardScaler, SVC]).",
+    "probability_mechanism": "SVC with probability=True uses Platt scaling (cross-validated logistic regression fitted on the decision_function scores). This produces predict_proba() \u2192 [[p_benign, p_malicious]].",
+    "production_ml_engine_current_model": "ml_engine.py currently loads model_rf_v1.pkl (Random Forest). It calls model.predict_proba(X)[0] and uses classes_ to identify p_benign and p_malicious. Threshold is 0.5.",
+    "svm_compatibility_with_ml_engine": "SVC(probability=True) exposes predict_proba() and classes_, identical interface to RandomForestClassifier. The ml_engine.py code would work unchanged with an SVM artifact \u2014 it only calls predict_proba() and reads .classes_.",
+    "calibration_note": "Platt scaling in SVC(probability=True) is a form of probability calibration, but it is not isotonic calibration or Venn-prediction. For a small dataset (241 samples) the probabilities may not be perfectly calibrated. Isotonic regression or CalibratedClassifierCV could improve probability estimates in a future iteration \u2014 but should not be added automatically. This is flagged as a potential future improvement.",
+    "current_threshold": "The production threshold in ml_engine.py is 0.5 (p_malicious >= 0.5 \u2192 'malicious'). Lowering this threshold would increase Recall at the cost of Precision. This is a product decision, not an engineering one.",
+    "risk_engine_integration": "ml_engine.py returns a dict with probability_malicious, confidence, and prediction. The risk engine reads this dict independently \u2014 the SVM candidate would slot in without changing the risk engine or frontend.",
+    "what_must_change_for_promotion": "Only one file changes: the model file at backend/app/ml/model_rf_v1.pkl must be replaced with the SVM artifact (serialized via joblib). The MODEL_VERSION constant in ml_engine.py should be updated (e.g., 'svm-combined-v1.0') for audit traceability."
+  },
+  "sanity": {
+    "rows": {
+      "ok": true,
+      "actual": 241,
+      "expected": 241
+    },
+    "benign": {
+      "ok": true,
+      "actual": 120,
+      "expected": 120
+    },
+    "malware": {
+      "ok": true,
+      "actual": 121,
+      "expected": 121
+    },
+    "feature_count": {
+      "ok": true,
+      "actual": 47,
+      "expected": 47
+    },
+    "nan": {
+      "ok": true,
+      "actual": 0,
+      "expected": 0
+    },
+    "inf": {
+      "ok": true,
+      "actual": 0,
+      "expected": 0
+    },
+    "missing": {
+      "ok": true,
+      "actual": 0,
+      "expected": 0
+    },
+    "sha256_cross_collision": {
+      "ok": true,
+      "actual": 0,
+      "expected": 0
+    },
+    "sha256_internal_dups": {
+      "ok": true,
+      "actual": 241,
+      "expected": 241
+    }
+  },
+  "decision": "A"
+}
