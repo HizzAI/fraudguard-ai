@@ -155,7 +155,7 @@ def calculate_ml(feature_result: Dict[str, Any]) -> Dict[str, Any]:
         return _failed_ml(str(exc), feature_result.get("version"))
 
     logger.info(
-        "ML inference complete: prediction=%s p_malicious=%.4f confidence=%.4f",
+        "ML inference complete: prediction=%s p_malicious=%.6f confidence=%.6f",
         prediction, p_malicious, confidence,
     )
 
@@ -165,8 +165,8 @@ def calculate_ml(feature_result: Dict[str, Any]) -> Dict[str, Any]:
         "feature_vector_version": feature_result.get("version"),
         "prediction":            prediction,
         "confidence":            confidence,
-        "probability_malicious": round(p_malicious, 4),
-        "probability_benign":    round(p_benign, 4),
+        "probability_malicious": round(p_malicious, 6),
+        "probability_benign":    round(p_benign, 6),
         "features_used":         FEATURE_COUNT,
         "disclaimer":            _DISCLAIMER,
     }

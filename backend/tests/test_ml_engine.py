@@ -128,3 +128,24 @@ class TestMLEngine:
         assert result["status"] == "failed"
         assert result["prediction"] is None
         assert "Simulated inference crash" in result["disclaimer"]
+
+    @patch("app.ml.feature_extractor.FEATURE_NAMES", [f"feat_{i}" for i in range(FEATURE_COUNT)])
+    @patch("app.ml.ml_engine._load_model")
+    def test_calculate_ml_precision_preservation(self, mock_load_model, mock_feature_result_success):
+        """Ensure very close probabilities remain distinguishable at 6 decimal places."""
+        mock_model = MagicMock()
+        mock_model.classes_ = [0, 1]
+        mock_load_model.return_value = mock_model
+        
+        # Test APK A raw probabilities
+        mock_model.predict_proba.return_value = np.array([[0.93528635, 0.06471365]])
+        result_a = calculate_ml(mock_feature_result_success)
+        
+        # Test APK B raw probabilities
+        mock_model.predict_proba.return_value = np.array([[0.93534579, 0.06465421]])
+        result_b = calculate_ml(mock_feature_result_success)
+        
+        assert result_a["probability_malicious"] == 0.064714
+        assert result_b["probability_malicious"] == 0.064654
+        assert result_a["probability_malicious"] != result_b["probability_malicious"]
+

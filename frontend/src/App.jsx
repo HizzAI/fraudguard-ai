@@ -224,11 +224,11 @@ function RiskHero({ data }) {
                   <div className="mt-2 text-xs font-mono text-slate-400 space-y-1">
                     <div className="flex justify-between items-center">
                       <span>Malicious Prob:</span>
-                      <span className="text-red-400">{(mlProbMalicious * 100).toFixed(1)}%</span>
+                      <span className="text-red-400">{(mlProbMalicious * 100).toFixed(3)}%</span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span>Benign Prob:</span>
-                      <span className="text-emerald-400">{(mlProbBenign * 100).toFixed(1)}%</span>
+                      <span className="text-emerald-400">{(mlProbBenign * 100).toFixed(3)}%</span>
                     </div>
                     <div className="text-[10px] text-slate-500 mt-2 italic leading-tight whitespace-normal">
                       * These are model outputs, not ground-truth verdicts.
