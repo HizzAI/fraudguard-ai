@@ -158,6 +158,8 @@ function RiskHero({ data }) {
   const mlStatus = data.ml?.status === 'success' ? 'Active' : 'Unavailable';
   const mlPrediction = data.ml?.prediction;
   const mlConfidence = data.ml?.confidence;
+  const mlProbMalicious = data.ml?.probability_malicious;
+  const mlProbBenign = data.ml?.probability_benign;
 
   const mlBadgeColor = mlStatus === 'Active' 
     ? (mlPrediction === 'malicious' ? 'text-red-400 bg-red-500/10 border-red-500/20' : 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20')
@@ -173,7 +175,7 @@ function RiskHero({ data }) {
             ) : (
               <>
                 <span className="text-5xl font-black tracking-tighter">{score}</span>
-                <span className="text-xs uppercase tracking-widest opacity-60">Risk Score</span>
+                <span className="text-xs uppercase tracking-widest opacity-60 text-center px-2">Rule-Based Risk Score</span>
               </>
             )}
           </div>
@@ -209,13 +211,30 @@ function RiskHero({ data }) {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
              <div className="bg-slate-950 p-4 rounded-lg border border-slate-800 flex flex-col justify-center">
               <div className="text-xs text-slate-500 uppercase tracking-wider mb-2">Machine Learning Engine</div>
-              <div className="flex items-center gap-2">
-                <BrainCircuit className={`w-5 h-5 ${mlStatus === 'Active' ? 'text-blue-400' : 'text-slate-500'}`} />
-                <span className={`px-2 py-0.5 rounded font-mono text-xs border ${mlBadgeColor}`}>
-                  {mlStatus === 'Active' 
-                    ? `PREDICTION: ${mlPrediction.toUpperCase()} (${(mlConfidence * 100).toFixed(1)}%)`
-                    : 'UNAVAILABLE'}
-                </span>
+              <div className="flex flex-col gap-2">
+                <div className="flex items-center gap-2">
+                  <BrainCircuit className={`w-5 h-5 ${mlStatus === 'Active' ? 'text-blue-400' : 'text-slate-500'}`} />
+                  <span className={`px-2 py-0.5 rounded font-mono text-xs border ${mlBadgeColor}`}>
+                    {mlStatus === 'Active' 
+                      ? `PREDICTION: ${mlPrediction.toUpperCase()} (${(mlConfidence * 100).toFixed(1)}%)`
+                      : 'UNAVAILABLE'}
+                  </span>
+                </div>
+                {mlStatus === 'Active' && mlProbMalicious !== undefined && mlProbBenign !== undefined && (
+                  <div className="mt-2 text-xs font-mono text-slate-400 space-y-1">
+                    <div className="flex justify-between items-center">
+                      <span>Malicious Prob:</span>
+                      <span className="text-red-400">{(mlProbMalicious * 100).toFixed(1)}%</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span>Benign Prob:</span>
+                      <span className="text-emerald-400">{(mlProbBenign * 100).toFixed(1)}%</span>
+                    </div>
+                    <div className="text-[10px] text-slate-500 mt-2 italic leading-tight whitespace-normal">
+                      * These are model outputs, not ground-truth verdicts.
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
             
