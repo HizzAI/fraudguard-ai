@@ -24,8 +24,6 @@
 
 @layer base {
   body {
-    background-color: #0b0f19;
-    color: #e5e7eb; /* tailwind text-gray-200 */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     min-height: 100vh;
