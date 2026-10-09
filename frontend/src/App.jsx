@@ -385,16 +385,7 @@ function AnalysisResults({ data }) {
       
       <div className="col-span-1 md:col-span-2 lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6">
         <ComponentsPanel components={data.components} />
-        {/* Placeholder for future pipeline logs or similar height element */}
-        <Card icon={Activity} title="Investigation Pipeline Log">
-           <div className="font-mono text-xs text-slate-500 space-y-2">
-             <div className="text-emerald-500">[OK] APK Ingested</div>
-             <div className="text-emerald-500">[OK] Manifest Parsed</div>
-             <div className="text-emerald-500">[OK] Certificate Verified</div>
-             <div className="text-emerald-500">[OK] ML Feature Vector Extracted (47 dim)</div>
-             <div className="text-emerald-500">[OK] Inference Completed</div>
-           </div>
-        </Card>
+        {/* Pipeline log removed until actual telemetry is supported */}
       </div>
 
       <ApiIndicatorsPanel apis={data.apis} />
