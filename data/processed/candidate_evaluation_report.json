@@ -1,0 +1,35 @@
+{
+  "split_methodology": "Stratified 80/20 train/test split on composite key (source + label) before any fitting",
+  "train_size": 179,
+  "test_size": 45,
+  "train_distribution": {
+    "androzoo_1": 81,
+    "androzoo_0": 80,
+    "maleval_1": 13,
+    "maleval_0": 5
+  },
+  "test_distribution": {
+    "androzoo_1": 20,
+    "androzoo_0": 20,
+    "maleval_1": 4,
+    "maleval_0": 1
+  },
+  "best_cv_params": {
+    "clf__C": 1.0,
+    "clf__kernel": "rbf"
+  },
+  "best_cv_recall": 0.9578947368421051,
+  "holdout_metrics": {
+    "accuracy": 0.9333333333333333,
+    "precision": 0.8888888888888888,
+    "recall": 1.0,
+    "f1": 0.9411764705882353,
+    "roc_auc": 0.9880952380952381,
+    "tp": 24,
+    "tn": 18,
+    "fp": 3,
+    "fn": 0
+  },
+  "feature_count": 37,
+  "limitations": "Although stratified, the test set is only 45 samples (with ~4 from MalEval). This is extremely small and wide confidence intervals exist on these metrics. This random split measures performance on a similar mixed-source distribution, not true cross-source generalization."
+}
