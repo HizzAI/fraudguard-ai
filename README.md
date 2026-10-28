@@ -431,4 +431,4 @@ FraudGuardAI is designed for split cloud deployment:
 
 ## License
 
-This project is developed for research and educational purposes as part of the Smart India Hackathon (SIH) 2026 prototype demonstration.
+**Project Type:** Department Mini-Project
