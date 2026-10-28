@@ -8,7 +8,8 @@ import {
 } from 'lucide-react'
 
 // ─── API Configuration ──────────────────────────────────────────────────────
-const API_BASE = import.meta.env.VITE_API_BASE || ''
+const rawApiBase = import.meta.env.VITE_API_BASE
+const API_BASE = (rawApiBase && rawApiBase.trim()) ? rawApiBase.trim().replace(/\/+$/, '') : ''
 const UPLOAD_ENDPOINT = `${API_BASE}/upload-apk`
 const HEALTH_ENDPOINT = `${API_BASE}/health`
 
@@ -804,8 +805,8 @@ function DashboardPage({ sessionCount, latestResult, onNewAnalysis, onViewLatest
               {healthStatus === 'error' && 'Backend Unreachable'}
             </div>
             <div className="text-xs text-slate-500">
-              {healthStatus === 'connected' && `${HEALTH_ENDPOINT || '/health'} responded OK`}
-              {healthStatus === 'error' && 'Ensure the FastAPI server is running on port 8000.'}
+              {healthStatus === 'connected' && `${HEALTH_ENDPOINT} responded OK`}
+              {healthStatus === 'error' && (API_BASE ? `Cannot reach backend at ${HEALTH_ENDPOINT}. Check if the server is active.` : 'Ensure backend is running and VITE_API_BASE is configured.')}
               {healthStatus === 'checking' && 'Pinging health endpoint…'}
             </div>
           </div>
