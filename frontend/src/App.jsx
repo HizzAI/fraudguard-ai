@@ -972,18 +972,6 @@ export default function App() {
             </button>
           ))}
         </nav>
-
-        <div className="p-4 border-t border-slate-800">
-          <div className="flex items-center gap-3 px-3 py-2 rounded-lg bg-slate-800/50">
-            <div className="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center text-slate-300 font-bold text-xs shrink-0">
-              SIH
-            </div>
-            <div className="text-xs min-w-0">
-              <div className="font-medium text-slate-200 truncate">FraudGuard AI</div>
-              <div className="text-slate-500 truncate">SIH 2026 Prototype</div>
-            </div>
-          </div>
-        </div>
       </aside>
 
       {/* Main Canvas */}
